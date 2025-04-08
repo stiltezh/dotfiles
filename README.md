@@ -61,7 +61,7 @@ Enhance your desktop experience with GNOME extensions via the GNOME Extensions W
 	```
 2.  Install specific extensions using the GNOME Extensions Installer:
 	```bash
-    sudo curl -s https://raw.githubusercontent.com/brunelli/gnome-shell-extension-installer/master/gnome-shell-extension-installer -o /usr/local/bin/gnome-shell-extension-installer
+    sudo curl -s https://github.com/brunelli/gnome-shell-extension-installer/releases/download/v1.7/gnome-shell-extension-installer -o /usr/local/bin/gnome-shell-extension-installer
     sudo chmod +x /usr/local/bin/gnome-shell-extension-installer
     ```
 3.  Add extensions using their IDs:
@@ -74,7 +74,7 @@ Make your desktop environment visually stunning with the **WhiteSur GTK Theme**,
 1.  **Install WhiteSur Icon Theme**:
 	```bash
     git clone https://github.com/vinceliuice/WhiteSur-icon-theme.git --depth=1
-    cd /tmp/WhiteSur-icon-theme
+    cd ~/WhiteSur-icon-theme
     sudo ./install.sh
     ```
 2.  **Install Apple Cursor**:
@@ -83,8 +83,8 @@ Make your desktop environment visually stunning with the **WhiteSur GTK Theme**,
 	```
 3.  **Install WhiteSur GTK Theme**:
 	```bash
-	git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git --depth=1 /tmp/WhiteSur-gtk-theme
-	cd /tmp/WhiteSur-gtk-theme
+	git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git --depth=1
+	cd ~/WhiteSur-gtk-theme
  	./install.sh -l --round --shell -i arch
  	./tweaks.sh -g -i arch -f flat -F -c Dark -d
 	```
@@ -96,14 +96,22 @@ Install these tools via `pacman`:
 ```bash
 sudo pacman -S video-trimmer amberol authenticator blanket cartridges collision decoder deja-dup \
 eartag gnome-app-list eyedropper raider fragments health impression komikku mousai newsflash obfuscate \
-paper-clip gnome-podcasts resources warp wike wine lib32-pipewire steam lutris slack-desktop
+paper-clip gnome-podcasts resources warp wike wine lib32-pipewire steam lutris amdvlk  	lib32-amdvlk  	amd-ucode mesa lib32-mesa  	xf86-video-amdgpu  xorg-xprop xdotool gnome-extra 	redshift wupd  	power-profiles-daemon  	gst-plugin-pipewire  	gstreamer  	gst-plugin-va packagekit  	libheif sushi file-roller gnome-online-accounts gvfs-goa gvfs-google  	gedit  	gedit-plugins  	gtksourceview4  	gimp
 ```
 
 #### Yay Packages:
 Install these tools via `yay` (make sure `yay` is installed):
 ```bash
-yay -S keypunch-git alpaca-ai rustdesk
+yay -S mkinitcpio-firmware keypunch-git alpaca-ai rustdesk slack-desktop zen-browser mspinball-bin remmina-git ttf-ms-win11-auto gnome-shell-extension-coverflow-alt-tab-git gnome-shell-extension-openweather menulibre gnome-shell-extension-easyscreencast folder-color-nautilus nautilus-admin-gtk4
 ```
+
+$ gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout 3600
+$ gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type hibernate
+$ gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-timeout 1800
+$ gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type hibernate
+$ gsettings set org.gnome.settings-daemon.plugins.power power-button-action suspend
+$ gsettings set org.gnome.desktop.lockdown disable-lock-screen true
+
 
 ## 🌍 Setting Up Flatpak
 
