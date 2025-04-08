@@ -56,7 +56,7 @@ dotfiles/
 ## 🔧 How to Use
 1.  Clone this repository:
     ```bash
-	git clone https://github.com/username/dotfiles.git
+	git clone https://github.com/stiltezh/dotfiles.git
     ```
 2.  Navigate to the directory:
 	```bash
