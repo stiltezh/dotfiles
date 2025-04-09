@@ -196,7 +196,7 @@ sudo pacman -S \
     resources warp wike wine lib32-pipewire steam lutris amdvlk lib32-amdvlk amd-ucode mesa lib32-mesa \
     xf86-video-amdgpu xorg-xprop xdotool gnome-extra redshift wupd power-profiles-daemon gst-plugin-pipewire \
     gstreamer gst-plugin-va packagekit libheif sushi file-roller gnome-online-accounts gvfs-goa gvfs-google \
-    gedit gedit-plugins gtksourceview4 gimp v4l-utils guvcview
+    gedit gedit-plugins gtksourceview4 gimp v4l-utils guvcview xdg-desktop-portal-gnome dconf-editor
 ```
 #### Yay Packages:
 Install these tools via `yay` (make sure `yay` is installed):
@@ -204,7 +204,7 @@ Install these tools via `yay` (make sure `yay` is installed):
 yay -S \
     mkinitcpio-firmware keypunch-git alpaca-ai rustdesk slack-desktop zen-browser mspinball-bin remmina-git \
     ttf-ms-win11-auto gnome-shell-extension-coverflow-alt-tab-git gnome-shell-extension-openweather menulibre \
-    gnome-shell-extension-easyscreencast folder-color-nautilus nautilus-admin-gtk4 bat-asus-battery-bin
+    gnome-shell-extension-easyscreencast folder-color-nautilus nautilus-admin-gtk4 bat-asus-battery-bin flatseal
 ```
 ## 🌍 Setting Up Flatpak
 Install and configure Flatpak to add universal app support.
@@ -212,10 +212,11 @@ Install and configure Flatpak to add universal app support.
 1.  Install Flatpak:
     ```bash
     sudo pacman -S flatpak
+    reboot
     ```
 2.  Add Flathub as a remote and Install applications from Flathub:
     ```bash
-    flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+    flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/flathub.flatpakrepo
     flatpak install -y flathub net.codelogistics.webapps eu.nokun.MirrorHall com.github.cassidyjames.dippi com.usebottles.bottles it.mijorus.collector
     ```
 ## 🎉 Conclusion
